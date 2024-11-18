@@ -1,0 +1,17 @@
+name = "my-hugo-site"
+type = "javascript"  # or "webpack" if you're using webpack
+
+account_id = "your-cloudflare-account-id"
+workers_dev = true
+compatibility_date = "2022-12-01"
+[env.production]
+route = "my-domain.com/*"
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "my-hugo-site-bucket"
+preview_bucket_name = "my-hugo-site-bucket-preview"
+[site]
+bucket = "./public"  # Directory containing static files
+entry-point = "./"  # Directory containing worker script
+[vars]
+GREETING = "Hello, World!"
