@@ -1,11 +1,11 @@
 name = "my-hugo-site"
 type = "javascript"  # or "webpack" if you're using webpack
 
-account_id = "your-cloudflare-account-id"
+account_id = "$CLOUDFLARE_ACCOUNT_ID"
 workers_dev = true
-compatibility_date = "2022-12-01"
+compatibility_date = "2024-11-19"
 [env.production]
-route = "my-domain.com/*"
+route = "nikd.co/*"
 [[r2_buckets]]
 binding = "MY_BUCKET"
 bucket_name = "my-hugo-site-bucket"
